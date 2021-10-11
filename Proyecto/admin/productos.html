@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Reciplas</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/propio.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.13.0/js/v4-shims.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="barra">
+            <div class="volver">
+                <a href="index.html">
+                    <i class="fas fa-arrow-left" style="font-size: 30px; text-decoration: none;"></i>
+                </a>
+            </div>
+            <a href="index.html">
+                <img src="../img/logo.png" href="../index.html" alt="" height="90%">
+            </a>
+            <div class="titulo">
+                <h1 class="h3 font-weight-normal">Listado de Productos</h1>
+                <p class="text-right">Administración: Gerencia</p>
+            </div>
+        </div>
+    </header>
+    <div class="usuario"> 
+        <div class="row">
+            <div>
+                <i class="fas fa-user-tie" style="font-size: 30px;"></i>
+            </div>
+            <div>
+                <p>   Nombre y Apellido</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: 75px;">
+        <div class="card">
+            <div class="card card-header">
+                <div class="row">
+                    <a type="button" class="btn btn-primary col col-md-2"  href="#" data-toggle="collapse" data-target="#filtrarPor" aria-expanded="false" aria-controls="#filtrarPor">
+                        <i class="fas fa-chevron-down"></i>
+                        Filtrar por
+                    </a>
+                    <div class="col col-md-7"> </div>
+                    <a type="button" class="btn btn-primary col col-md-3" href="#" data-toggle="modal" data-target="#nuevoProducto" aria-expanded="false" aria-controls="#nuevoProducto">
+                        <i class="fas fa-plus-circle"></i>
+                        Nuevo producto
+                    </a>
+                </div>
+            </div>
+
+            <div class="collapse" id="filtrarPor">
+                <form class="row">
+                    <div class="form-group col-4 my-sm-2">
+                        <input type="checkbox" class="input-control mx-sm-3" name="selnombre" aria-hidden="true">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" class="input-control mx-sm-3" name="nombre"/>
+                    </div>
+                    <div class="form-group col-4 my-sm-2">
+                        <input type="checkbox" class="input-control mx-sm-3" name="selidproducto" aria-hidden="true">
+                        <label for="idproducto">ID Producto</label>
+                        <input type="text" class="input-control mx-sm-3" name="idproducto"/>
+                    </div>
+                    <div class="form-group col-4 my-sm-2">
+                        <input type="checkbox" class="input-control mx-sm-3" name="selfecha" aria-hidden="true">
+                        <label for="fecha">Fecha</label>
+                        <input type="date" class="input-control mx-sm-3" name="fecha"/>
+                    </div>
+                </form>
+            </div>
+
+            <div class="card card-body table-responsive text-center">
+                <table class="table table-hover table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID del Producto</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Descripción</th>
+                            <th scope="col">Cantidad por unidad</th>
+                            <th scope="col">Precio unitario</th>
+                            <th scope="col">Fecha</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">231321</td>
+                            <td>Botellas plasticas</td>
+                            <td class="text-truncate" style="max-width: 150px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit libero ipsa dolorum sed, ea reiciendis molestias laudantium voluptatibus voluptatum blanditiis corrupti ratione vel eos recusandae placeat magni numquam provident debitis.</td>
+                            <td>135</td>
+                            <td>34</td>
+                            <td>23/02/2019</td>
+                            <td> 
+                                <a href="#" role="button" data-toggle="modal" data-target="#editarProd">
+                                    <i class="fas fa-pencil-alt" style="font-size: 15px; color: #000000;"></i>
+                                </a>
+                                &nbsp&nbsp
+                                <a href="#" role="button" data-toggle="modal" data-target="#eliminarProd">
+                                    <i class="far fa-trash-alt" style="font-size: 15px; color: #000000;"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">231321</td>
+                            <td>Botellas plasticas</td>
+                            <td class="text-truncate" style="max-width: 150px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit libero ipsa dolorum sed, ea reiciendis molestias laudantium voluptatibus voluptatum blanditiis corrupti ratione vel eos recusandae placeat magni numquam provident debitis.</td>
+                            <td>135</td>
+                            <td>34</td>
+                            <td>23/02/2019</td>
+                            <td> 
+                                <a href="#" role="button" data-toggle="modal" data-target="#editarProd">
+                                    <i class="fas fa-pencil-alt" style="font-size: 15px; color: #000000;"></i>
+                                </a>
+                                &nbsp&nbsp
+                                <a href="#" role="button" data-toggle="modal" data-target="#eliminarProd">
+                                    <i class="far fa-trash-alt" style="font-size: 15px; color: #000000;"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">231321</td>
+                            <td>Botellas plasticas</td>
+                            <td class="text-truncate" style="max-width: 150px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit libero ipsa dolorum sed, ea reiciendis molestias laudantium voluptatibus voluptatum blanditiis corrupti ratione vel eos recusandae placeat magni numquam provident debitis.</td>
+                            <td>135</td>
+                            <td>34</td>
+                            <td>23/02/2019</td>
+                            <td> 
+                                <a href="#" role="button" data-toggle="modal" data-target="#editarProd">
+                                    <i class="fas fa-pencil-alt" style="font-size: 15px; color: #000000;"></i>
+                                </a>
+                                &nbsp&nbsp
+                                <a href="#" role="button" data-toggle="modal" data-target="#eliminarProd">
+                                    <i class="far fa-trash-alt" style="font-size: 15px; color: #000000;"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">231321</td>
+                            <td>Botellas plasticas</td>
+                            <td class="text-truncate" style="max-width: 150px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit libero ipsa dolorum sed, ea reiciendis molestias laudantium voluptatibus voluptatum blanditiis corrupti ratione vel eos recusandae placeat magni numquam provident debitis.</td>
+                            <td>135</td>
+                            <td>34</td>
+                            <td>23/02/2019</td>
+                            <td> 
+                                <a href="#" role="button" data-toggle="modal" data-target="#editarProd">
+                                    <i class="fas fa-pencil-alt" style="font-size: 15px; color: #000000;"></i>
+                                </a>
+                                &nbsp&nbsp
+                                <a href="#" role="button" data-toggle="modal" data-target="#eliminarProd">
+                                    <i class="far fa-trash-alt" style="font-size: 15px; color: #000000;"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">231321</td>
+                            <td>Botellas plasticas</td>
+                            <td class="text-truncate" style="max-width: 150px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit libero ipsa dolorum sed, ea reiciendis molestias laudantium voluptatibus voluptatum blanditiis corrupti ratione vel eos recusandae placeat magni numquam provident debitis.</td>
+                            <td>135</td>
+                            <td>34</td>
+                            <td>23/02/2019</td>
+                            <td> 
+                                <a href="#" role="button" data-toggle="modal" data-target="#editarProd">
+                                    <i class="fas fa-pencil-alt" style="font-size: 15px; color: #000000;"></i>
+                                </a>
+                                &nbsp&nbsp
+                                <a href="#" role="button" data-toggle="modal" data-target="#eliminarProd">
+                                    <i class="far fa-trash-alt" style="font-size: 15px; color: #000000;"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="editarProd" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="editarProdTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editarProdTitle">Modificación del producto: 231321</h5>
+                    <span>
+                        <script type="text/javascript">
+                            var d = new Date();
+                            document.write('<b>Fecha: </b>'+d.getDate(),'/'+(d.getMonth()+1),'/'+d.getFullYear());
+                        </script>
+                    </span>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-inline">
+                            <div class="form-group col-md-12">
+                                <label for="nombre" class="">NOMBRE&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                                <input type="text" class="form-control mx-sm-3 my-sm-3" id="nombre" placeholder=""/>
+                                <small class="text-muted">(*)</small>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="precio" class="">PRECIO <br> UNITARIO&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                                <input type="" class="form-control mx-sm-3 my-sm-2" min="0" size="5" id="precio" placeholder="">
+                                <small class="text-muted">pesos &nbsp (*)</small>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="peso" class="">CANTIDAD <br> POR UNIDAD&nbsp&nbsp</label>
+                                <input type="" class="form-control mx-sm-3 my-sm-3" min="0" size="5" id="peso" placeholder="">
+                                <small class="text-muted">kg &nbsp (*)</small>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="descr" class="">DESCRIPCIÓN</label>
+                                <textarea style="width: 450px;" type="" class="form-control mx-sm-3 my-sm-3" id="descr" placeholder="Añadir una descripción..."></textarea>
+                                <small class="text-muted">(*)</small>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <small class="text-muted">(*) Campo obligatorio</small>
+                    <button type="button" class="btn btn btn-secondary" data-toggle="modal" data-target="#preguntaCE">Cancelar</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#preguntaGE">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="modal fade" id="nuevoProducto" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="nuevoProductoTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role=document>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="nuevoProductotitle">Registro de nuevo producto</h5>
+                    <span>
+                        <script type="text/javascript">
+                            var d = new Date();
+                            document.write('<b>Fecha: </b>'+d.getDate(),'/'+(d.getMonth()+1),'/'+d.getFullYear());
+                        </script>
+                    </span>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-inline">
+                            <div class="form-group col-md-12">
+                                <label for="nombre" class="">NOMBRE&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                                <input type="text" class="form-control mx-sm-3 my-sm-3" id="nombre" placeholder=""/>
+                                <small class="text-muted">(*)</small>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="precio" class="">PRECIO <br> UNITARIO&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                                <input type="" class="form-control mx-sm-3 my-sm-2" min="0" size="5" id="precio" placeholder="">
+                                <small class="text-muted">pesos &nbsp (*)</small>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="peso" class="">CANTIDAD <br> POR UNIDAD&nbsp&nbsp</label>
+                                <input type="" class="form-control mx-sm-3 my-sm-3" min="0" size="5" id="peso" placeholder="">
+                                <small class="text-muted">kg &nbsp (*)</small>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="descr" class="">DESCRIPCIÓN</label>
+                                <textarea style="width: 450px;" type="" class="form-control mx-sm-3 my-sm-3" id="descr" placeholder="Añadir una descripción..."></textarea>
+                                <small class="text-muted">(*)</small>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <small class="text-muted">(*) Campo obligatorio</small>
+                    <button class="btn btn btn-secondary" type="button" data-toggle="modal" data-target="#preguntaCN">Cancelar</button>
+                    <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#preguntaGN">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="eliminarProd" data-backdrop="static" tabindex="-1" role="document" aria-describedby="eliminarProdTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p class="text-center">¿Está seguro de que desea eliminar?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Si</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--MODALES DE NUEVOS PROD-->
+
+    <div>
+        <div class="modal fade" id="preguntaCN" tabindex="-1" role="dialog" aria-labelledby="preguntaTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <b>¿Está seguro de que desea cancelar?</b>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn btn-secondary" data-dismiss="modal">No</button>
+                        <button type="submit" class="btn btn-primary" data-toggle="modal" data-dismiss="modal" data-target="#nuevoProducto">Si</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="preguntaGN" tabindex="-1" role="dialog" aria-labelledby="preguntaTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <b>¿Está seguro de que desea continuar?</b>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn btn-secondary" data-dismiss="modal">No</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#imprimirNuevo">Si</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="imprimirNuevo" tabindex="-1" role="dialog" aria-labelledby="imprimirNuevoTitle" aria-hidden="true" data-backdrop="static">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" data-toggle="modal" data-target="#nuevoProducto" aria-label="Cerrar todo">
+                            <span aria-hidden="true">&times</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Imprimir un comprobante de la operación:</p><a type="button" class="btn btn-primary" href="reportes/Grupo 349.png"> <i class="fas fa-print" style="font-size:15px;"></i>  Imprimir</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--MODALES DE EDICIÓN DE PROD-->
+    <div>
+        <div class="modal fade" id="preguntaCE" tabindex="-1" role="dialog" aria-labelledby="preguntaTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <b>¿Está seguro de que desea cancelar?</b>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn btn-secondary" data-dismiss="modal">No</button>
+                        <button type="submit" class="btn btn-primary" data-toggle="modal" data-dismiss="modal" data-target="#editarProd">Si</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="preguntaGE" tabindex="-1" role="dialog" aria-labelledby="preguntaTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <b>¿Está seguro de que desea continuar?</b>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn btn-secondary" data-dismiss="modal">No</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#imprimirEditado">Si</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="imprimirEditado" tabindex="-1" role="dialog" aria-labelledby="imprimirEditadoTitle" aria-hidden="true" data-backdrop="static">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" data-toggle="modal" data-target="#editarProd" aria-label="Cerrar todo">
+                            <span aria-hidden="true">&times</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Imprimir un comprobante de la operación:</p><a type="button" class="btn btn-primary" href="reportes/Grupo 348.png"> <i class="fas fa-print" style="font-size:15px;"></i>  Imprimir</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Acá abajo van a estar ubicados los scripts de js pertenecientes a la página -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="../js/bootstrap.js"></script>
+
+</body>
+</html>

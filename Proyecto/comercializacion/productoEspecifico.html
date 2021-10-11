@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Reciplas</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/propio.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.13.0/js/v4-shims.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="barra">
+            <div class="volver">
+                <a href="productos.html">
+                    <i class="fas fa-arrow-left" style="font-size: 30px; text-decoration: none;"></i>
+                </a>
+            </div>
+            <a href="index.html">
+                <img src="../img/logo.png" href="../index.html" alt="" height="90%">
+            </a>
+            <div class="titulo">
+                <h1 class="h3 font-weight-normal">Gestión de Productos</h1>
+                <p class="text-right">Comercialización</p>
+            </div>
+        </div>
+    </header>
+    <div class="usuario"> 
+        <div class="row">
+            <div>
+                <i class="fas fa-user-tie" style="font-size: 30px;"></i>
+            </div>
+            <div>
+                <p>   Nombre y Apellido</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: 75px;">
+        <div class="card">
+            <div class="card card-header">
+                <h5 class="h5 font-weight-normal mb-3">Movimientos de Producto</h5> <br>
+                <div class="row">
+                    <a type="button" class="btn btn-primary col col-md-2"  href="#" data-toggle="collapse" data-target="#filtrarPor" aria-expanded="false" aria-controls="#filtrarPor">
+                        <i class="fas fa-chevron-down"></i>
+                        Filtrar por
+                    </a>
+                    <div class="col col-md-6"></div>
+                    <div class="col-md-4 col text-right">
+                        <a type="button" class="btn btn-secondary" href="reportes/Stock Productos- Historico.jpg" target="_blank"><i class="fas fa-print" style="font-size: 15px;"></i>   Imprimir seleccionado(s)</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="collapse" id="filtrarPor">
+                <form class="row">
+                    <div class="form-group col-4 my-sm-2">
+                        <input type="checkbox" class="input-control mx-sm-3" name="selnombre" aria-hidden="true">
+                        <label for="nombre">Periodo</label>
+                        <input type="text" class="input-control mx-sm-3" name="nombre"/>
+                    </div>
+                    <div class="form-group col-4 my-sm-2">
+                        <input type="checkbox" class="input-control mx-sm-3" name="selidproducto" aria-hidden="true">
+                        <label for="idproducto">Año</label>
+                        <input type="text" class="input-control mx-sm-3" name="idproducto"/>
+                    </div>
+                    <div class="form-group col-4 my-sm-2">
+                        <input type="checkbox" class="input-control mx-sm-3" name="selusuario" aria-hidden="true">
+                        <label for="proveedor">ID Usuario</label>
+                        <input type="text" class="input-control mx-sm-3" name="proveedor"/>
+                    </div>
+                </form>
+            </div>
+            <div class="card card-body table-responsive">
+                <div class="row my-sm-3">
+                    <h5 class="h5 font-weight-normal mb-3 text-center col">ID del Producto: 00001</h5>
+                    <h5 class="h5 font-weight-normal mb-3 text-center col">Nombre: Botella de plástico</h5>
+                    <h5 class="h5 font-weight-normal mb-3 text-center col">Stock actual(kg): 2005</h5>
+                </div>
+                <table class="table table-hover table-bordered">
+                    <thead>
+                        <tr>
+                            <th style="width: 20px;"></th>
+                            <th scope="col">Fecha</th>
+                            <th scope="col">Cantidad(kg)</th>
+                            <th scope="col">Descripción</th>
+                            <th scope="col">ID Usuario</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox" class="input-control mx-sm-3" name="sel" aria-hidden="true"></td>
+                            <td>23/02/2019</td>
+                            <td>135</td> 
+                            <td class="text-truncate" style="max-width: 150px;">Color verde, dimensiones: 30x20</td>
+                            <td>63468</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="input-control mx-sm-3" name="sel" aria-hidden="true"></td>
+                            <td>13/02/2019</td>
+                            <td>-200</td>
+                            <td class="text-truncate" style="max-width: 150px;">Abc</td>
+                            <td>63457</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="input-control mx-sm-3" name="sel" aria-hidden="true"></td>
+                            <td>04/02/2019</td>
+                            <td>500</td>
+                            <td class="text-truncate" style="max-width: 150px;">Abc</td>
+                            <td>63447</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="input-control mx-sm-3" name="sel" aria-hidden="true"></td>
+                            <td>21/01/2019</td>
+                            <td>600</td>
+                            <td class="text-truncate" style="max-width: 150px;">Abc</td>
+                            <td>63495</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="input-control mx-sm-3" name="sel" aria-hidden="true"></td>
+                            <td>18/01/2019</td>
+                            <td>-123</td>
+                            <td class="text-truncate" style="max-width: 150px;">Abc</td>
+                            <td>62566</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Acá abajo van a estar ubicados los scripts de js pertenecientes a la página -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="../js/bootstrap.js"></script>
+
+</body>
+</html>

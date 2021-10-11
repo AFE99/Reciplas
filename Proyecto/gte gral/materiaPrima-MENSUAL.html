@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reciplas</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/propio.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.13.0/js/v4-shims.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="barra">
+            <div class="volver">
+                <a href="materiaprima.html">
+                    <i class="fas fa-arrow-left" style="font-size: 30px; text-decoration: none;"></i>
+                </a>
+            </div>
+            <a href="index.html">
+                <img src="../img/logo.png" href="../index.html" alt="" height="90%">
+            </a>
+            <h1 class="h3 mb-3 font-weight-normal titulo">Gerente General</h1>
+        </div>
+    </header>
+    <img src="../img/190517-Foto-RECICLAJE-SUM.png" alt="" id="fondoGral";background-position>
+
+    <div class="usuario"> 
+        <div class="row">
+            <div>
+                <i class="fas fa-user-tie" style="font-size: 30px;"></i>
+            </div>
+            <div>
+                <p>   Nombre y Apellido</p>
+            </div>
+        </div>
+    </div>
+    <br> <br><br>
+    <div class="text-center"><b>Inventario de Materia Prima</b></div>
+    <div class="card card-body table-responsive gtegral">
+        <table class="table table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th style="max-width: 50px;">MATERIA PRIMA:</th>
+                    <th style="max-width: 90px;">
+                        Plástico 1  <i class="fas fa-caret-down" style="font-size: 20px;"></i>
+                    </th>
+                    <th style="max-width: 20px;" class="text-right" >MES:</th>
+                    <th style="max-width: 30px;" class="text-center">
+                        ABRIL  <i class="fas fa-caret-down" style="font-size: 20px;"></i>
+                    </th>
+                </tr>
+            </thead>
+        </table>
+        <div class="GraficoBarras">
+            <canvas id="MiGrafica" width="250" height="150"></canvas>
+        </div> 
+    </div>
+     
+</body>
+<script>
+    let miCanvas=document.getElementById("MiGrafica").getContext("2d");
+
+    var chart= new Chart(miCanvas,{
+        type:"bar",
+        data:{
+            labels:["06/04","13/04","20/04","27/04"],
+            datasets:[
+                {
+                    label:"Plastico 1",
+                    backgroundColor:"rgb(77, 136, 255)",
+                    data:[116, 71, 25, 33]
+                },
+            ]
+        },
+        options:{
+                scales:{
+                    yAxes:[{
+                            ticks:{
+                                    beginAtZero: true
+                                  }
+                          }]
+                       },
+                layout: {
+                    padding: {
+                        left: 10,
+                        right: 10,
+                        top: 10,
+                        bottom: 10
+                             }
+                        }
+                }
+    })
+</script>
+</html>
